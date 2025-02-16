@@ -1,9 +1,9 @@
 ## Grey Wolf Optimisation
 
-Basically, its also used to choose best solution(*metaheurisitc operatoin*) and its workflow is similar to the hunting behavior of wil dgrey wolves.
+Basically, its also used to choose best solution(*metaheurisitc operation*) and its workflow is similar to the hunting behavior of wil grey wolves.
 
 - no derivates !
-- exploratoin(global search) + exploitatoin(local search)
+- exploration(global search) + exploitation(local search)
 -  Avoids getting stuck in local optima by allowing Omega wolves to explore new solutions.
 -  Handles multiple objectives (e.g., balancing novelty vs. relevance) because the pack naturally prioritizes the best trade-off solutions.
 
