@@ -1,6 +1,6 @@
-SUMMARY STATS:
+##SUMMARY STATS:
 
-There are 2-5 main stats which are:
+###There are 2-5 main stats which are:
 
   - h_index --->
                 The h-index asks "What is the largest h such that the author has at least h publications with at least h citations?"
