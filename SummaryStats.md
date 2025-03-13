@@ -1,6 +1,4 @@
 SUMMARY STATS:
-  TABLES:
-  -
 
 There are 2-5 main stats which are:
 
@@ -17,6 +15,10 @@ There are 2-5 main stats which are:
                   It was introduced in July 2011 by Google as part of their work on Google Scholar.
 
   - works_count --->
+                    Integer: The number of works.
+                    
     
-  - cited_by_count -->
+  - cited_by_count --->
+                       Integer: The number of citations to works that are linked to this (publisher/topic/author).
+                       For example, if a publisher publishes 27 journals and those 27 journals have 3,050 works, this number is the sum of the cited_by_count values                          for all of those 3,050 works.
   
