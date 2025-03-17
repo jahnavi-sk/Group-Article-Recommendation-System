@@ -1,0 +1,206 @@
+[
+    {
+        "id": "https://openalex.org/fields/27",
+        "display_name": "Medicine",
+        "description": "field of study for diagnosing, treating and preventing disease",
+        "display_name_alternatives": [
+            "healthcare sciences"
+        ],
+        "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+        },
+        "subfields": [
+            {
+                "id": "https://openalex.org/subfields/2702",
+                "display_name": "Anatomy"
+            },
+            {
+                "id": "https://openalex.org/subfields/2703",
+                "display_name": "Anesthesiology and Pain Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2704",
+                "display_name": "Biochemistry"
+            },
+            {
+                "id": "https://openalex.org/subfields/2705",
+                "display_name": "Cardiology and Cardiovascular Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2707",
+                "display_name": "Complementary and alternative medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2706",
+                "display_name": "Critical Care and Intensive Care Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2708",
+                "display_name": "Dermatology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2711",
+                "display_name": "Emergency Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2712",
+                "display_name": "Endocrinology, Diabetes and Metabolism"
+            },
+            {
+                "id": "https://openalex.org/subfields/2713",
+                "display_name": "Epidemiology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2714",
+                "display_name": "Family Practice"
+            },
+            {
+                "id": "https://openalex.org/subfields/2715",
+                "display_name": "Gastroenterology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2716",
+                "display_name": "Genetics"
+            },
+            {
+                "id": "https://openalex.org/subfields/2717",
+                "display_name": "Geriatrics and Gerontology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2718",
+                "display_name": "Health Informatics"
+            },
+            {
+                "id": "https://openalex.org/subfields/2720",
+                "display_name": "Hematology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2721",
+                "display_name": "Hepatology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2723",
+                "display_name": "Immunology and Allergy"
+            },
+            {
+                "id": "https://openalex.org/subfields/2725",
+                "display_name": "Infectious Diseases"
+            },
+            {
+                "id": "https://openalex.org/subfields/2724",
+                "display_name": "Internal Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2726",
+                "display_name": "Microbiology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2727",
+                "display_name": "Nephrology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2728",
+                "display_name": "Neurology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2729",
+                "display_name": "Obstetrics and Gynecology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2730",
+                "display_name": "Oncology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2731",
+                "display_name": "Ophthalmology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2732",
+                "display_name": "Orthopedics and Sports Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2733",
+                "display_name": "Otorhinolaryngology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2734",
+                "display_name": "Pathology and Forensic Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2735",
+                "display_name": "Pediatrics, Perinatology and Child Health"
+            },
+            {
+                "id": "https://openalex.org/subfields/2736",
+                "display_name": "Pharmacology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2737",
+                "display_name": "Physiology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2738",
+                "display_name": "Psychiatry and Mental health"
+            },
+            {
+                "id": "https://openalex.org/subfields/2739",
+                "display_name": "Public Health, Environmental and Occupational Health"
+            },
+            {
+                "id": "https://openalex.org/subfields/2740",
+                "display_name": "Pulmonary and Respiratory Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2741",
+                "display_name": "Radiology, Nuclear Medicine and Imaging"
+            },
+            {
+                "id": "https://openalex.org/subfields/2742",
+                "display_name": "Rehabilitation"
+            },
+            {
+                "id": "https://openalex.org/subfields/2743",
+                "display_name": "Reproductive Medicine"
+            },
+            {
+                "id": "https://openalex.org/subfields/2745",
+                "display_name": "Rheumatology"
+            },
+            {
+                "id": "https://openalex.org/subfields/2746",
+                "display_name": "Surgery"
+            },
+            {
+                "id": "https://openalex.org/subfields/2747",
+                "display_name": "Transplantation"
+            },
+            {
+                "id": "https://openalex.org/subfields/2748",
+                "display_name": "Urology"
+            }
+        ],
+        "siblings": [
+            {
+                "id": "https://openalex.org/fields/35",
+                "display_name": "Dentistry"
+            },
+            {
+                "id": "https://openalex.org/fields/36",
+                "display_name": "Health Professions"
+            },
+            {
+                "id": "https://openalex.org/fields/29",
+                "display_name": "Nursing"
+            },
+            {
+                "id": "https://openalex.org/fields/34",
+                "display_name": "Veterinary"
+            }
+        ],
+        "works_count": 36272606,
+        "cited_by_count": 433646577,
+        "works_api_url": "https://api.openalex.org/works?filter=topics.field.id:27",
+        "updated": "2024-04-01T04:37:08.847205"
+    }
+]
