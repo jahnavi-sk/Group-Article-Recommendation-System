@@ -1,0 +1,800 @@
+[
+    {
+        "id": "https://openalex.org/W2016627268",
+        "doi": "https://doi.org/10.1067/mva.1993.45062",
+        "doi_registration_agency": "Crossref",
+        "display_name": "Percutaneous transluminal renal angioplasty versus surgical reconstruction of atherosclerotic renal artery stenosis: A prospective randomized study",
+        "publication_date": "1993-11-01",
+        "language": "en",
+        "ids": {
+            "mag": 2016627268
+        },
+        "primary_location": {
+            "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "host_organization_lineage": [
+                    "https://openalex.org/I1299303238"
+                ],
+                "publisher_lineage": [],
+                "publisher_lineage_names": [],
+                "publisher_id": null,
+                "type": "repository"
+            },
+            "version": null,
+            "doi": "https://doi.org/10.1067/mva.1993.45062"
+        },
+        "type": "article",
+        "type_crossref": "journal-article",
+        "open_access": {
+            "is_oa": false
+        },
+        "authorships": [
+            {
+                "author_position": "first",
+                "author": {
+                    "id": "https://openalex.org/A5013167854",
+                    "display_name": "Henrik Weibull"
+                },
+                "institutions": [
+                    {
+                        "id": "https://openalex.org/I183111857",
+                        "display_name": "Malm\u00f6 University"
+                    },
+                    {
+                        "id": "https://openalex.org/I187531555",
+                        "display_name": "Lund University"
+                    }
+                ],
+                "is_corresponding": false,
+                "raw_affiliation_string": "Department of Surgery, Lund University, Malm\u00f6 General Hospital, Sweden."
+            },
+            {
+                "author_position": "middle",
+                "author": {
+                    "id": "https://openalex.org/A5013259507",
+                    "display_name": "David Bergqvist"
+                },
+                "institutions": [],
+                "is_corresponding": false,
+                "raw_affiliation_string": ""
+            },
+            {
+                "author_position": "middle",
+                "author": {
+                    "id": "https://openalex.org/A5001464842",
+                    "display_name": "Sven-Erik Bergentz"
+                },
+                "institutions": [],
+                "is_corresponding": false,
+                "raw_affiliation_string": ""
+            },
+            {
+                "author_position": "middle",
+                "author": {
+                    "id": "https://openalex.org/A5038390028",
+                    "display_name": "Kjell Jonsson"
+                },
+                "institutions": [],
+                "is_corresponding": false,
+                "raw_affiliation_string": ""
+            },
+            {
+                "author_position": "middle",
+                "author": {
+                    "id": "https://openalex.org/A5036399711",
+                    "display_name": "Lennart Hulth\u00e9n"
+                },
+                "institutions": [],
+                "is_corresponding": false,
+                "raw_affiliation_string": ""
+            },
+            {
+                "author_position": "last",
+                "author": {
+                    "id": "https://openalex.org/A5079313789",
+                    "display_name": "Per Manhem"
+                },
+                "institutions": [],
+                "is_corresponding": false,
+                "raw_affiliation_string": ""
+            }
+        ],
+        "corresponding_author_ids": [],
+        "summary_stats": {
+            "cited_by_count": 140,
+            "2yr_cited_by_count": 7
+        },
+        "concepts": [
+            {
+                "id": "https://openalex.org/C71924100",
+                "display_name": "Medicine",
+                "level": 0,
+                "score": 0.87963545
+            },
+            {
+                "id": "https://openalex.org/C2781016617",
+                "display_name": "Renal artery stenosis",
+                "level": 4,
+                "score": 0.7125024
+            },
+            {
+                "id": "https://openalex.org/C2780813298",
+                "display_name": "Percutaneous",
+                "level": 2,
+                "score": 0.6684226
+            },
+            {
+                "id": "https://openalex.org/C2781243531",
+                "display_name": "Renovascular hypertension",
+                "level": 3,
+                "score": 0.6402588
+            },
+            {
+                "id": "https://openalex.org/C84393581",
+                "display_name": "Blood pressure",
+                "level": 2,
+                "score": 0.6322232
+            },
+            {
+                "id": "https://openalex.org/C2776634560",
+                "display_name": "Renal artery",
+                "level": 3,
+                "score": 0.58909804
+            },
+            {
+                "id": "https://openalex.org/C2780007028",
+                "display_name": "Stenosis",
+                "level": 2,
+                "score": 0.5718889
+            },
+            {
+                "id": "https://openalex.org/C2909549721",
+                "display_name": "Renal Artery Obstruction",
+                "level": 5,
+                "score": 0.53797406
+            },
+            {
+                "id": "https://openalex.org/C159641895",
+                "display_name": "Renal function",
+                "level": 2,
+                "score": 0.537929
+            },
+            {
+                "id": "https://openalex.org/C2780326628",
+                "display_name": "Angioplasty",
+                "level": 2,
+                "score": 0.48753402
+            },
+            {
+                "id": "https://openalex.org/C2780643987",
+                "display_name": "Angiography",
+                "level": 2,
+                "score": 0.46097863
+            },
+            {
+                "id": "https://openalex.org/C164705383",
+                "display_name": "Cardiology",
+                "level": 1,
+                "score": 0.44322973
+            },
+            {
+                "id": "https://openalex.org/C141071460",
+                "display_name": "Surgery",
+                "level": 1,
+                "score": 0.40949798
+            },
+            {
+                "id": "https://openalex.org/C126322002",
+                "display_name": "Internal medicine",
+                "level": 1,
+                "score": 0.39970204
+            },
+            {
+                "id": "https://openalex.org/C2780091579",
+                "display_name": "Kidney",
+                "level": 2,
+                "score": 0.31387368
+            }
+        ],
+        "referenced_works": [
+            "https://openalex.org/W1975622210",
+            "https://openalex.org/W1980578028",
+            "https://openalex.org/W1989760520",
+            "https://openalex.org/W1991310845",
+            "https://openalex.org/W2002128845",
+            "https://openalex.org/W2007132314",
+            "https://openalex.org/W2007198439",
+            "https://openalex.org/W2026557021",
+            "https://openalex.org/W2043670643",
+            "https://openalex.org/W2046172320",
+            "https://openalex.org/W2048241725",
+            "https://openalex.org/W2048512680",
+            "https://openalex.org/W2050646726",
+            "https://openalex.org/W2054890799",
+            "https://openalex.org/W2059831639",
+            "https://openalex.org/W2069055292",
+            "https://openalex.org/W2069714065",
+            "https://openalex.org/W2073175593",
+            "https://openalex.org/W2078249135",
+            "https://openalex.org/W2085592894",
+            "https://openalex.org/W2087324029",
+            "https://openalex.org/W2090467089",
+            "https://openalex.org/W2098440313",
+            "https://openalex.org/W2119586157",
+            "https://openalex.org/W2120862215",
+            "https://openalex.org/W2164550955",
+            "https://openalex.org/W2401507099",
+            "https://openalex.org/W2406023622",
+            "https://openalex.org/W2408666791",
+            "https://openalex.org/W2463163352"
+        ],
+        "referenced_works_count": 30,
+        "sustainable_development_goals": [],
+        "related_works": [
+            "https://openalex.org/W2000062022",
+            "https://openalex.org/W2010354081",
+            "https://openalex.org/W2053512341",
+            "https://openalex.org/W2065501158",
+            "https://openalex.org/W2091055592",
+            "https://openalex.org/W2287866865",
+            "https://openalex.org/W2406707398",
+            "https://openalex.org/W2415727391",
+            "https://openalex.org/W2430067787",
+            "https://openalex.org/W2901943967"
+        ],
+        "abstract_inverted_index": {
+            "The": [
+                0,
+                109,
+                132,
+                188
+            ],
+            "purpose": [
+                1
+            ],
+            "of": [
+                2,
+                57,
+                107,
+                179,
+                217,
+                231
+            ],
+            "this": [
+                3
+            ],
+            "prospective": [
+                4
+            ],
+            "randomized": [
+                5,
+                68
+            ],
+            "study": [
+                6
+            ],
+            "was": [
+                7,
+                75,
+                99,
+                116,
+                140,
+                170
+            ],
+            "to": [
+                8,
+                22,
+                69,
+                86
+            ],
+            "compare": [
+                9
+            ],
+            "percutaneous": [
+                10
+            ],
+            "transluminal": [
+                11
+            ],
+            "renal": [
+                12,
+                35,
+                42,
+                93,
+                195,
+                210,
+                235
+            ],
+            "angioplasty": [
+                13
+            ],
+            "(PTRA)": [
+                14
+            ],
+            "and": [
+                15,
+                26,
+                29,
+                34,
+                59,
+                64,
+                81,
+                89,
+                92,
+                103,
+                122,
+                142,
+                160,
+                184,
+                199,
+                209,
+                246
+            ],
+            "operation": [
+                16,
+                104
+            ],
+            "as": [
+                17,
+                228
+            ],
+            "initial": [
+                18
+            ],
+            "therapy": [
+                19,
+                232
+            ],
+            "with": [
+                20,
+                39,
+                221,
+                243
+            ],
+            "regard": [
+                21
+            ],
+            "technical": [
+                23
+            ],
+            "results,": [
+                24
+            ],
+            "primary": [
+                25,
+                110
+            ],
+            "secondary": [
+                27,
+                133
+            ],
+            "patency,": [
+                28,
+                88
+            ],
+            "effects": [
+                30,
+                205
+            ],
+            "on": [
+                31,
+                206
+            ],
+            "blood": [
+                32,
+                90,
+                207
+            ],
+            "pressure": [
+                33,
+                91,
+                208
+            ],
+            "function": [
+                36,
+                94,
+                196,
+                211
+            ],
+            "in": [
+                37,
+                101,
+                105,
+                118,
+                124,
+                128,
+                136,
+                143,
+                154,
+                163,
+                177
+            ],
+            "patients": [
+                38,
+                45,
+                153,
+                181,
+                219
+            ],
+            "atherosclerotic": [
+                40,
+                234
+            ],
+            "unilateral": [
+                41
+            ],
+            "artery": [
+                43,
+                236
+            ],
+            "stenosis.Fifty-eight": [
+                44
+            ],
+            "who": [
+                46,
+                51,
+                60
+            ],
+            "did": [
+                47,
+                212
+            ],
+            "not": [
+                48,
+                213
+            ],
+            "have": [
+                49
+            ],
+            "diabetes,": [
+                50
+            ],
+            "were": [
+                52,
+                67,
+                95,
+                197
+            ],
+            "less": [
+                53
+            ],
+            "than": [
+                54
+            ],
+            "70": [
+                55
+            ],
+            "years": [
+                56,
+                83
+            ],
+            "age,": [
+                58
+            ],
+            "had": [
+                61
+            ],
+            "severe": [
+                62
+            ],
+            "hypertension": [
+                63,
+                240
+            ],
+            "significant": [
+                65
+            ],
+            "stenosis": [
+                66,
+                237
+            ],
+            "receive": [
+                70
+            ],
+            "PTRA": [
+                71,
+                98,
+                120,
+                138,
+                156,
+                183,
+                222
+            ],
+            "or": [
+                72,
+                172,
+                193
+            ],
+            "operation.": [
+                73,
+                187
+            ],
+            "Angiography": [
+                74
+            ],
+            "performed": [
+                76
+            ],
+            "10": [
+                77
+            ],
+            "days,": [
+                78
+            ],
+            "1": [
+                79
+            ],
+            "year,": [
+                80
+            ],
+            "2": [
+                82
+            ],
+            "after": [
+                84,
+                113,
+                174,
+                182,
+                186
+            ],
+            "treatment": [
+                85,
+                176
+            ],
+            "verify": [
+                87
+            ],
+            "simultaneously": [
+                96
+            ],
+            "evaluated.Technically,": [
+                97
+            ],
+            "successful": [
+                100,
+                130
+            ],
+            "83%": [
+                102,
+                198
+            ],
+            "97%": [
+                106
+            ],
+            "patients.": [
+                108
+            ],
+            "patency": [
+                111,
+                134
+            ],
+            "rate": [
+                112,
+                135
+            ],
+            "24": [
+                114
+            ],
+            "months": [
+                115
+            ],
+            "75%": [
+                117
+            ],
+            "the": [
+                119,
+                125,
+                137,
+                144,
+                155,
+                164,
+                180,
+                218
+            ],
+            "group": [
+                121,
+                127,
+                139,
+                146,
+                157,
+                166
+            ],
+            "96%": [
+                123
+            ],
+            "operative": [
+                126
+            ],
+            "technically": [
+                129
+            ],
+            "cases.": [
+                131
+            ],
+            "90%": [
+                141,
+                178
+            ],
+            "surgical": [
+                145,
+                165,
+                224
+            ],
+            "97%.": [
+                147
+            ],
+            "To": [
+                148
+            ],
+            "achieve": [
+                149
+            ],
+            "these": [
+                150
+            ],
+            "results": [
+                151
+            ],
+            "four": [
+                152
+            ],
+            "required": [
+                158,
+                167,
+                223
+            ],
+            "operation,": [
+                159
+            ],
+            "one": [
+                161
+            ],
+            "patient": [
+                162
+            ],
+            "PTRA.": [
+                168
+            ],
+            "Hypertension": [
+                169
+            ],
+            "cured": [
+                171
+            ],
+            "improved": [
+                173,
+                192
+            ],
+            "additional": [
+                175,
+                203
+            ],
+            "86%": [
+                185
+            ],
+            "corresponding": [
+                189
+            ],
+            "figures": [
+                190
+            ],
+            "for": [
+                191,
+                233
+            ],
+            "unchanged": [
+                194
+            ],
+            "72%,": [
+                200
+            ],
+            "respectively.": [
+                201
+            ],
+            "After": [
+                202
+            ],
+            "treatment,": [
+                204
+            ],
+            "differ.": [
+                214
+            ],
+            "Seventeen": [
+                215
+            ],
+            "percent": [
+                216
+            ],
+            "treated": [
+                220
+            ],
+            "intervention.PTRA": [
+                225
+            ],
+            "is": [
+                226
+            ],
+            "recommended": [
+                227
+            ],
+            "first": [
+                229
+            ],
+            "choice": [
+                230
+            ],
+            "causing": [
+                238
+            ],
+            "renovascular": [
+                239
+            ],
+            "if": [
+                241
+            ],
+            "combined": [
+                242
+            ],
+            "intensive": [
+                244
+            ],
+            "follow-up": [
+                245
+            ],
+            "aggressive": [
+                247
+            ],
+            "reintervention.": [
+                248
+            ]
+        },
+        "counts_by_year": [
+            {
+                "year": 2022,
+                "cited_by_count": 2
+            },
+            {
+                "year": 2021,
+                "cited_by_count": 2
+            },
+            {
+                "year": 2020,
+                "cited_by_count": 1
+            },
+            {
+                "year": 2019,
+                "cited_by_count": 1
+            },
+            {
+                "year": 2017,
+                "cited_by_count": 4
+            },
+            {
+                "year": 2016,
+                "cited_by_count": 2
+            },
+            {
+                "year": 2015,
+                "cited_by_count": 3
+            },
+            {
+                "year": 2014,
+                "cited_by_count": 3
+            },
+            {
+                "year": 2013,
+                "cited_by_count": 6
+            },
+            {
+                "year": 2012,
+                "cited_by_count": 6
+            }
+        ],
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2016627268",
+        "updated": "2023-08-09T17:43:19.609424",
+        "authors_count": 6,
+        "concepts_count": 15
+    }
+]

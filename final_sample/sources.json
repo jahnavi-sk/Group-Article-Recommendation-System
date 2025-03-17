@@ -1,0 +1,136 @@
+[
+    {
+        "id": "https://openalex.org/S4210237738",
+        "issn_l": "2410-7980",
+        "display_name": "Revista iberoamericana de bioeconom\u00eda y cambio clim\u00e0tico",
+        "publisher": "National Autonomous University of Nicaragua",
+        "host_organization": "https://openalex.org/P4310319228",
+        "host_organization_name": "National Autonomous University of Nicaragua",
+        "host_organization_lineage": [
+            "https://openalex.org/P4310319228"
+        ],
+        "host_organization_lineage_names": [
+            "National Autonomous University of Nicaragua"
+        ],
+        "is_oa": true,
+        "is_in_doaj": true,
+        "host_institution_lineage": [],
+        "host_institution_lineage_names": [],
+        "publisher_lineage": [
+            "https://openalex.org/P4310319228"
+        ],
+        "publisher_lineage_names": [
+            "National Autonomous University of Nicaragua"
+        ],
+        "publisher_id": "https://openalex.org/P4310319228",
+        "type": "journal",
+        "summary_stats": {
+            "h_index": 5,
+            "i10_index": 0,
+            "works_count": 160,
+            "cited_by_count": 228
+        },
+        "alternate_titles": [
+            "REIBIOCAMCLI"
+        ],
+        "abbreviated_title": "Rev. iberoam. bioecon. cambio clim.",
+        "homepage_url": "https://revistas.unanleon.edu.ni/index.php/REBICAMCLI/index",
+        "societies": [],
+        "counts_by_year": [
+            {
+                "year": 2023,
+                "works_count": 9,
+                "oa_works_count": 8,
+                "cited_by_count": 67
+            },
+            {
+                "year": 2022,
+                "works_count": 19,
+                "oa_works_count": 17,
+                "cited_by_count": 90
+            },
+            {
+                "year": 2021,
+                "works_count": 16,
+                "oa_works_count": 16,
+                "cited_by_count": 33
+            },
+            {
+                "year": 2020,
+                "works_count": 9,
+                "oa_works_count": 9,
+                "cited_by_count": 7
+            },
+            {
+                "year": 2019,
+                "works_count": 13,
+                "oa_works_count": 13,
+                "cited_by_count": 14
+            },
+            {
+                "year": 2018,
+                "works_count": 17,
+                "oa_works_count": 15,
+                "cited_by_count": 4
+            },
+            {
+                "year": 2017,
+                "works_count": 11,
+                "oa_works_count": 11,
+                "cited_by_count": 1
+            },
+            {
+                "year": 2016,
+                "works_count": 41,
+                "oa_works_count": 41,
+                "cited_by_count": 10
+            },
+            {
+                "year": 2015,
+                "works_count": 12,
+                "oa_works_count": 12,
+                "cited_by_count": 1
+            }
+        ],
+        "x_concepts": [
+            {
+                "id": "https://openalex.org/C142362112",
+                "display_name": "Art",
+                "level": 0,
+                "score": 78.8
+            },
+            {
+                "id": "https://openalex.org/C15708023",
+                "display_name": "Humanities",
+                "level": 1,
+                "score": 78.8
+            },
+            {
+                "id": "https://openalex.org/C138885662",
+                "display_name": "Philosophy",
+                "level": 0,
+                "score": 78.8
+            },
+            {
+                "id": "https://openalex.org/C205649164",
+                "display_name": "Geography",
+                "level": 0,
+                "score": 48.1
+            },
+            {
+                "id": "https://openalex.org/C17744445",
+                "display_name": "Political science",
+                "level": 0,
+                "score": 40.0
+            },
+            {
+                "id": "https://openalex.org/C86803240",
+                "display_name": "Biology",
+                "level": 0,
+                "score": 24.4
+            }
+        ],
+        "works_api_url": "https://api.openalex.org/works?filter=primary_location.source.id:S4210237738",
+        "updated": "2023-08-02"
+    }
+]
