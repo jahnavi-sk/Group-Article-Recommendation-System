@@ -20,9 +20,7 @@
                     "ror": "https://ror.org/00jmfr291",
                     "display_name": "University of Michigan\u2013Ann Arbor",
                     "country_code": "US",
-                    "country_id": "https://openalex.org/countries/US",
                     "type": "education",
-                    "type_id": "https://openalex.org/institution-types/education",
                     "lineage": [
                         "https://openalex.org/I27837315"
                     ]
@@ -38,9 +36,7 @@
                     "ror": "https://ror.org/01sf06y89",
                     "display_name": "Macquarie University",
                     "country_code": "AU",
-                    "country_id": "https://openalex.org/countries/AU",
                     "type": "education",
-                    "type_id": "https://openalex.org/institution-types/education",
                     "lineage": [
                         "https://openalex.org/I99043593"
                     ]
