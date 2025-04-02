@@ -28,7 +28,7 @@ def add_commas_and_convert(input_file, inter_file):
     data = f"[{data}]"
 
     try:
-        # Convert to JSON
+        # Convert to JSON.
         json_data = json.loads(data)
 
         # Write the formatted JSON to the intermediate file
@@ -54,6 +54,7 @@ def remove_fields(inter_file, output_file):
         entry.pop('cited_by_count', None)
         entry.pop('updated_date', None)
         entry.pop('created_date', None)
+        # NOTE: the code is continued
 
 
         # Remove fields in 'summary_stats'
