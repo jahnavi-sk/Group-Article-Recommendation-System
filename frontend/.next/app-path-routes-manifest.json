@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/author-recommendations/page": "/author-recommendations",
+  "/recommendations/page": "/recommendations",
+  "/page": "/",
+  "/recommendation-type/page": "/recommendation-type",
+  "/topic/page": "/topic",
+  "/mode/page": "/mode"
+}
