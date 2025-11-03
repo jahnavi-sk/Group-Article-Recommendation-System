@@ -1,58 +1,70 @@
 
 'use client';
 
+import { useSearchParams } from 'next/navigation';
 import { Suspense, useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 
 type Author = {
   name: string;
+  id: string;
   affiliation: string;
+  hIndex: number;
+  i10Index: number;
   interests: string[];
   url: string;
 };
 
-const hardcodedAuthors: Author[] = [
-    { name: 'Dr. Evelyn Reed', affiliation: 'Stanford University', interests: ['Quantum Physics', 'Astrophysics'], url: 'https://google.com' },
-    { name: 'Prof. Kenji Tanaka', affiliation: 'University of Tokyo', interests: ['AI Ethics', 'Robotics'], url: 'https://google.com' },
-    { name: 'Dr. Maria Garcia', affiliation: 'MIT', interests: ['Bio-engineering', 'Genomics'], url: 'https://google.com' },
-    { name: 'Dr. Sam Carter', affiliation: 'Caltech', interests: ['Theoretical Physics', 'String Theory'], url: 'https://google.com' },
-    { name: 'Prof. Lena Petrova', affiliation: 'Moscow State University', interests: ['Organic Chemistry', 'Catalysis'], url: 'https://google.com' },
-    { name: 'Dr. Ahmed Al-Jamil', affiliation: 'King Saud University', interests: ['Medieval History', 'Islamic Studies'], url: 'https://google.com' },
-    { name: 'Prof. Chloe Bennet', affiliation: 'Oxford University', interests: ['Shakespearean Literature', 'Renaissance Art'], url: 'https://google.com' },
-    { name: 'Dr. David Chen', affiliation: 'Peking University', interests: ['Macroeconomics', 'International Trade'], url: 'https://google.com' },
-    { name: 'Dr. Emily White', affiliation: 'Harvard University', interests: ['Cognitive Neuroscience', 'Psychology'], url: 'https://google.com' },
-    { name: 'Prof. Omar Badawi', affiliation: 'American University in Cairo', interests: ['Political Science', 'Middle Eastern Studies'], url: 'https://google.com' },
-];
+
 
 
 function AuthorRecommendationsContent() {
+  const searchParams = useSearchParams();
+  const institution = searchParams.get('institution') || '';
+  const topics = searchParams.get('topics') || '';
+
+  // const [institution, setInstitution] = useState('');
+  // const [topics, setTopics] = useState('');
   const [authors, setAuthors] = useState<Author[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchAuthors = () => {
-      setLoading(true);
-      setTimeout(() => {
-        try {
-          setAuthors(hardcodedAuthors);
-          setError(null);
-        } catch (e) {
-          setError('Failed to load author recommendations.');
-          console.error(e);
-        } finally {
-          setLoading(false);
-        }
-      }, 500);
-    };
 
-    fetchAuthors();
-  }, []);
+  useEffect(() => {
+    console.log()
+  fetchAuthors();
+}, [institution, topics]);
+
+   const fetchAuthors = async () => {
+    
+  setLoading(true);
+  setError(null);
+  try {
+    const res = await fetch('http://127.0.0.1:5000/author-topic-recommendations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        topics, // array of topics
+        institution, // array of institutions (optional)
+      }),
+    });
+    if (!res.ok) throw new Error('Network response was not ok');
+    const data = await res.json();
+    setAuthors(data.recommendations || []);
+  } catch (e) {
+    setError('Failed to load author recommendations.');
+    setAuthors([]);
+    console.error(e);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center p-4 pt-20 bg-transparent">
       <div className="w-full max-w-6xl">
+        
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Author Recommendations</h1>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -80,24 +92,31 @@ function AuthorRecommendationsContent() {
         {error && <p className="text-center text-destructive">{error}</p>}
 
         {!loading && !error && (
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {authors.map((author, index) => (
-              <a href={author.url} target="_blank" rel="noopener noreferrer" key={index} className="block group">
-                <Card className="h-full bg-card/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{author.name}</CardTitle>
-                    <CardDescription className="text-sm">{author.affiliation}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">
-                      Interests: {author.interests.join(', ')}
-                    </p>
-                  </CardContent>
-                </Card>
-              </a>
-            ))}
-          </div>
-        )}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {authors.map((author, index) => (
+      <a
+        href={`https://openalex.org/authors/${author.id}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        key={index}
+        className="block group"
+      >
+        <Card className="h-full bg-card/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+          <CardHeader>
+            <CardTitle className="text-lg">{author.name}</CardTitle>
+            <CardDescription className="text-sm">{author.affiliation}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="text-muted-foreground text-sm">
+              <div>h-index: {author.hIndex ?? 'N/A'}</div>
+              <div>i10-index: {author.i10Index ?? 'N/A'}</div>
+            </div>
+          </CardContent>
+        </Card>
+      </a>
+    ))}
+  </div>
+)}
          {!loading && !error && authors.length === 0 && (
             <p className="text-center text-muted-foreground">No authors found.</p>
         )}

@@ -24,7 +24,7 @@ def calculate_fitness(weights, driver, group_interests):
     cypher_query = """
     WITH $interests AS group_interests
     UNWIND group_interests AS interest_query
-    CALL db.index.fulltext.queryNodes($index_name, interest_query) YIELD node AS work, score
+    CALL db.index.fulltext.queryNodes($index_name, interest_query, {topK: 500}) YIELD node AS work, score
     WITH work, count(DISTINCT interest_query) AS interests_matched, avg(score) AS avg_relevance
     WITH work, interests_matched, avg_relevance,
          (avg_relevance * $w1) + 

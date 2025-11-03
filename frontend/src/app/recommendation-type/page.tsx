@@ -20,7 +20,7 @@ export default function RecommendationTypePage() {
             </CardHeader>
           </Card>
         </Link>
-        <Link href="/mode?type=author" className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 [animation-delay:200ms]">
+        <Link href="/author_topic" className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 [animation-delay:200ms]">
           <Card className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-accent/20 bg-card/50 backdrop-blur-sm">
             <CardHeader className="flex flex-col items-center justify-center p-8 text-center">
               <User className="h-16 w-16 mb-4" style={{color: 'hsl(var(--accent))'}}/>
