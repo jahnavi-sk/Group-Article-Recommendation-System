@@ -6,7 +6,44 @@ URI = "neo4j://localhost:7687"
 AUTH = ("neo4j", "jahnavi17")
 driver = GraphDatabase.driver(URI, auth=AUTH)
 
+from functools import lru_cache
+import math
+
+@lru_cache(maxsize=None)
+def cached_query_results(interest, driver, index_name):
+    cypher_query = """
+    CALL db.index.fulltext.queryNodes($index_name, $interest, {topK: 500})
+    YIELD node AS work, score
+    RETURN work.citedByCount AS citedByCount, score
+    """
+    records, _, _ = driver.execute_query(
+        cypher_query, {"interest": interest, "index_name": index_name}, database_="neo4j"
+    )
+    return [(r["score"], r["citedByCount"]) for r in records]
+
+
+
+
+
 def calculate_fitness(weights, driver, group_interests):
+    w1, w2, w3 = weights
+    index_name = "papers_search_english"
+
+    all_scores = []
+    for interest in group_interests:
+        results = cached_query_results(interest, driver, index_name)
+        for score, citedBy in results:
+            group_score = (score * w1) + (1 * w2) + (math.log10(int(citedBy) + 1) * w3)
+            all_scores.append(group_score)
+
+    if not all_scores:
+        return 0
+
+    return sum(all_scores) / len(all_scores)
+
+
+
+# def calculate_fitness(weights, driver, group_interests):
     """
     Executes the recommendation query with a given set of weights
     and returns a fitness score.

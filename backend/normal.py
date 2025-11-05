@@ -66,6 +66,7 @@
 # normal.py
 
 from neo4j import GraphDatabase
+from train_model import trainingMod
 
 # --- Configuration ---
 URI = "bolt://localhost:7687"
@@ -74,7 +75,7 @@ AUTH = ("neo4j", "jahnavi17")
 # --- 🧠 Your Pre-Trained Model ---
 # Paste the weights you got from running train_model.py here.
 # OPTIMAL_WEIGHTS = [5.499999999999998, 3.2693401917931966, 1.7274545983481469]    # <-- UPDATE THIS VALUE
-OPTIMAL_WEIGHTS = [5.499999999999998, 3.2693401917931966, 1.7274545983481469]    # <-- UPDATE THIS VALUE
+# OPTIMAL_WEIGHTS = [5.499999999999998, 3.2693401917931966, 1.7274545983481469]    # <-- UPDATE THIS VALUE
 
 # ----------------------------------
 
@@ -84,6 +85,8 @@ def get_group_recommendations(group_interests: list, driver,email):
     using the pre-calculated optimal weights.
     """
     # This function no longer needs to accept 'best_weights'
+    OPTIMAL_WEIGHTS = trainingMod(group_interests)
+    print(f"Using Optimal Weights: {OPTIMAL_WEIGHTS}")
     w1, w2, w3 = OPTIMAL_WEIGHTS
     
     query_params = {

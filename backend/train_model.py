@@ -8,10 +8,13 @@ from hill import hill_climb
 URI = "bolt://localhost:7687" # Use bolt:// for direct connection
 AUTH = ("neo4j", "jahnavi17")
 
-def main():
+def trainingMod(group_interests):
     # A set of diverse, representative interests to create a good general-purpose model.
     # This teaches the model how to handle both niche and broad topics.
-    training_interests = ['machine learning', 'medicine', 'biology', 'pharmacology', 'ethics']
+    # training_interests = ['machine learning', 'medicine', 'biology', 'pharmacology', 'ethics']
+    training_interests = group_interests
+
+    # training_interests = ['finance', 'security', 'blockchain', 'biochemistry']
     
     print("--- Starting Offline Model Training ---")
     
@@ -29,6 +32,9 @@ def main():
         print(f"Final Optimized Weights: {final_weights.tolist()}")
         print(f"Final Fitness Score: {final_score}")
         print("\nACTION: Copy the 'Final Optimized Weights' list into your normal.py file.")
+        # return final_weights.tolist()
+        return [1,1,1]
+    
 
 if __name__ == '__main__':
-    main()
+    trainingMod()
