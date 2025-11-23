@@ -21,6 +21,7 @@ type Recommendation = {
   url: string;
   liked?: boolean;
   likes: number;
+  date: string;
 };
 
 
@@ -42,6 +43,9 @@ function RecommendationsContent() {
 
   // const email = searchParams.get('email') || localStorage.getItem('userEmail') || '';
 
+
+  const [sortByYear, setSortByYear] = useState(false);
+  const [originalRecommendations, setOriginalRecommendations] = useState<Recommendation[]>([]);
   
   
   const mode = searchParams.get('mode');
@@ -132,6 +136,23 @@ function RecommendationsContent() {
   }
 };
 
+const handleSortByYear = () => {
+  setSortByYear(prev => {
+    if (!prev) {
+      setRecommendations(prevRecs =>
+        [...prevRecs].sort((a, b) => {
+          // Use getTime if date is a full date string, fallback to Number if it's just a year
+          const aTime = a.date ? new Date(a.date).getTime() : 0;
+          const bTime = b.date ? new Date(b.date).getTime() : 0;
+          return bTime - aTime;
+        })
+      );
+    } else {
+      setRecommendations(originalRecommendations);
+    }
+    return !prev;
+  });
+};
 
 useEffect(() => {
   
@@ -219,6 +240,7 @@ useEffect(() => {
       console.log('hi')
       console.log('Received data:', data);
       setRecommendations(data.recommendations || []);
+      setOriginalRecommendations(data.recommendations || []);
       setLikedRecommendations(
   new Set(
     (data.recommendations || [])
@@ -236,6 +258,8 @@ useEffect(() => {
     }
   };
 
+  
+
  fetchRecommendations();
 // }, [topicsParam]);
 }, [searchParams.toString(),email]);
@@ -251,6 +275,15 @@ return (
     >
       Want to get a problem statement based on some of these abstracts ?
     </button>
+      
+
+    <button
+  className="absolute top-10 right-0 m-4 px-4 py-2 bg-primary text-white rounded shadow hover:bg-primary/80 transition"
+  onClick={handleSortByYear}
+>
+  {sortByYear ? "Original Order" : "Sort by Year"}
+</button>
+    
     {showDialog && (
       <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50 p-4">
         <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg p-8 max-w-3xl w-full max-h-[80vh] overflow-y-auto relative">
@@ -295,6 +328,7 @@ return (
       >
         {showAuthors ? "Show Papers" : "Authors"}
       </button>
+      
       <button
         className="absolute top-0 left-0 m-4 px-4 py-2 bg-primary text-white rounded shadow hover:bg-primary/80 transition"
         onClick={() => setShowCBF(prev => !prev)}

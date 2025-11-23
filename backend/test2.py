@@ -34,6 +34,7 @@ def calculate_fitness(weights, driver, group_interests):
         results = cached_query_results(interest, driver, index_name)
         for score, citedBy in results:
             group_score = (score * w1) + (1 * w2) + (math.log10(int(citedBy) + 1) * w3)
+            # print('score = ', score, 'citedBy = ', citedBy, 'group_score = ', group_score)
             all_scores.append(group_score)
     if not all_scores:
         return 0
@@ -184,24 +185,81 @@ def hybrid_gwo_hill(fitness_fn):
 group_interests = ["machine learning", "deep learning", "ethics"]
 fitness_fn = make_fitness_fn(driver, group_interests)
 
-methods = {
-    "GWO": lambda: gwo(fitness_fn),
-    "Hill": lambda: hill_climb(fitness_fn, np.random.uniform(-1, 1, 3)),
-    "PSO": lambda: pso(fitness_fn),
-    "GA+NN": lambda: ga_nn(fitness_fn),
-    "Hybrid (GWO+Hill)": lambda: hybrid_gwo_hill(fitness_fn)
-}
+# methods = {
+#     "GWO": lambda: gwo(fitness_fn),
+#     "Hill": lambda: hill_climb(fitness_fn, np.random.uniform(-1, 1, 3)),
+#     "PSO": lambda: pso(fitness_fn),
+#     "GA+NN": lambda: ga_nn(fitness_fn),
+#     "Hybrid (GWO+Hill)": lambda: hybrid_gwo_hill(fitness_fn)
+# }
 
-plt.figure(figsize=(10,6))
-for name, fn in methods.items():
-    best, score, conv = fn()
-    print(f"{name:15s} → Best fitness: {score:.4f}, Normalized weights: {np.round(best, 3)}")
-    plt.plot(conv, label=name)
+# plt.figure(figsize=(10,6))
+# for name, fn in methods.items():
+#     best, score, conv = fn()
+#     print(f"{name:15s} → Best fitness: {score:.4f}, Normalized weights: {np.round(best, 3)}")
+#     plt.plot(conv, label=name)
 
 
-plt.title("Convergence Comparison Across Algorithms")
-plt.xlabel("Iteration")
-plt.ylabel("Best Fitness")
+# plt.title("Convergence Comparison Across Algorithms")
+# plt.xlabel("Iteration")
+# plt.ylabel("Best Fitness")
+# plt.legend()
+# plt.grid(True)
+# plt.show()
+
+# from mpl_toolkits.mplot3d import Axes3D
+
+# w1 = np.linspace(-1, 1, 30)
+# w2 = np.linspace(-1, 1, 30)
+# W1, W2 = np.meshgrid(w1, w2)
+# fitness_vals = np.zeros_like(W1)
+
+# for i in range(W1.shape[0]):
+#     for j in range(W1.shape[1]):
+#         w = np.array([W1[i,j], W2[i,j], 0.3])
+#         fitness_vals[i,j] = fitness_fn(w)
+
+# fig = plt.figure()
+# ax = fig.add_subplot(111, projection='3d')
+# ax.plot_surface(W1, W2, fitness_vals, cmap='viridis')
+# plt.title("Fitness Landscape for w1-w2 plane")
+# plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.ndimage import gaussian_filter1d
+
+w2, w3 = 0.3, 0.5
+w1_values = np.linspace(-1, 1, 50)
+fitness_values = [fitness_fn(np.array([w1, w2, w3])) for w1 in w1_values]
+
+
+smoothed = gaussian_filter1d(fitness_values, sigma=1.0)
+
+h = w1_values[1] - w1_values[0]   # assume uniform spacing
+# second derivative via central differences
+fpp = np.empty_like(smoothed)
+fpp[0] = (smoothed[2] - 2*smoothed[1] + smoothed[0]) / (h*h)               # forward-ish edge
+fpp[-1]= (smoothed[-1] - 2*smoothed[-2] + smoothed[-3]) / (h*h)            # backward-ish edge
+fpp[1:-1] = (smoothed[2:] - 2*smoothed[1:-1] + smoothed[:-2]) / (h*h)
+
+plt.figure(figsize=(10,4))
+plt.subplot(1,2,1)
+plt.plot(w1_values, fitness_values, label='raw')
+plt.plot(w1_values, smoothed, label='smoothed', linewidth=2)
 plt.legend()
-plt.grid(True)
+plt.title("Fitness vs w1")
+
+plt.subplot(1,2,2)
+plt.plot(w1_values, fpp)
+plt.axhline(0, color='k', linewidth=0.8)
+plt.title("Second derivative (f'')")
+plt.xlabel('w1')
+plt.tight_layout()
 plt.show()
+# plt.plot(w1_values, fitness_values)
+# plt.xlabel("w1")
+# plt.ylabel("Fitness")
+# plt.title("Fitness Landscape along w1")
+# plt.show()

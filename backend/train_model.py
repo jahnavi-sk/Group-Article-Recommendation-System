@@ -32,8 +32,8 @@ def trainingMod(group_interests):
         print(f"Final Optimized Weights: {final_weights.tolist()}")
         print(f"Final Fitness Score: {final_score}")
         print("\nACTION: Copy the 'Final Optimized Weights' list into your normal.py file.")
-        # return final_weights.tolist()
-        return [1,1,1]
+        return final_weights.tolist()
+        # return [1,1,1]
     
 
 if __name__ == '__main__':

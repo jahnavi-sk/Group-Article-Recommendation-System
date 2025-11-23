@@ -128,6 +128,7 @@ LIMIT 20
 RETURN 
   work.displayName AS title, 
   work.id AS id,
+  work.date AS date,
   work.abstract AS summary, 
   'https://openalex.org/works/' + work.id AS url, 
   group_score, 
