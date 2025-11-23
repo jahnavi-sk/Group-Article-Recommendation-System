@@ -28,6 +28,8 @@ interface LoginFormProps {
   onSuccess: () => void;
 }
 
+const API_URL = "https://bcda4060fa65.ngrok-free.app";
+
 export function LoginForm({ onSuccess }: LoginFormProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -43,7 +45,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
   const onSubmit = async (data: LoginFormValues) => {
   setIsLoading(true);
   try {
-    const res = await fetch('http://127.0.0.1:5000/login', {
+    const res = await fetch(`${API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

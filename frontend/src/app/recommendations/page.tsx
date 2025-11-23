@@ -25,6 +25,8 @@ type Recommendation = {
 };
 
 
+const API_URL = "https://bcda4060fa65.ngrok-free.app";
+
 function RecommendationsContent() {
   const searchParams = useSearchParams();
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
@@ -71,7 +73,7 @@ function RecommendationsContent() {
   console.log('User email 2:', email);
   if (!email) return alert("Please log in to like works");
 
-  const res = await fetch('http://127.0.0.1:5000/like-work', {
+  const res = await fetch(`${API_URL}/like-work`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ workId, email }),
@@ -120,7 +122,7 @@ function RecommendationsContent() {
   console.log("Fetching similar user works for email:", email);
   setCbfLoading(true);
   try {
-    const res = await fetch('http://127.0.0.1:5000/similar-user-works', {
+    const res = await fetch(`${API_URL}/similar-user-works`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email }),
@@ -175,7 +177,7 @@ useEffect(() => {
       const abstracts = recommendations.slice(0, 5).map(r => r.summary || '').filter(Boolean);
       if (abstracts.length === 5) {
         setProblemLoading(true);
-        fetch('http://127.0.0.1:5000/problem-statement', {
+        fetch(`${API_URL}/problem-statement`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ abstracts }),
@@ -223,7 +225,7 @@ useEffect(() => {
     setLoading(true);
     try {
       console.log('Fetching recommendations...');
-      const res = await fetch('http://127.0.0.1:5000/recommendations', {
+      const res = await fetch(`${API_URL}/recommendations`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

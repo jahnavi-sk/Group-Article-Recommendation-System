@@ -148,6 +148,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$s
 ;
 ;
 ;
+const API_URL = "https://bcda4060fa65.ngrok-free.app";
+// fetch(`${API_URL}/your-backend-route`, ...)
 function AuthorRecommendationsContent() {
     const searchParams = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSearchParams"])();
     const institution = searchParams.get('institution') || '';
@@ -168,7 +170,7 @@ function AuthorRecommendationsContent() {
         setLoading(true);
         setError(null);
         try {
-            const res = await fetch('http://127.0.0.1:5000/author-topic-recommendations', {
+            const res = await fetch(`${API_URL}/author-topic-recommendations`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -202,7 +204,7 @@ function AuthorRecommendationsContent() {
                             children: "Author Recommendations"
                         }, void 0, false, {
                             fileName: "[project]/src/app/author-recommendations/page.tsx",
-                            lineNumber: 69,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -210,13 +212,13 @@ function AuthorRecommendationsContent() {
                             children: "Here are some authors based on your topics."
                         }, void 0, false, {
                             fileName: "[project]/src/app/author-recommendations/page.tsx",
-                            lineNumber: 70,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/author-recommendations/page.tsx",
-                    lineNumber: 68,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this),
                 loading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -232,33 +234,11 @@ function AuthorRecommendationsContent() {
                                             className: "h-6 w-3/4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                            lineNumber: 80,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
-                                            className: "h-4 w-1/2 mt-2"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                            lineNumber: 81,
-                                            columnNumber: 19
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                    lineNumber: 79,
-                                    columnNumber: 17
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
-                                            className: "h-4 w-full"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/author-recommendations/page.tsx",
                                             lineNumber: 84,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
-                                            className: "h-4 w-2/3 mt-2"
+                                            className: "h-4 w-1/2 mt-2"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/author-recommendations/page.tsx",
                                             lineNumber: 85,
@@ -269,16 +249,38 @@ function AuthorRecommendationsContent() {
                                     fileName: "[project]/src/app/author-recommendations/page.tsx",
                                     lineNumber: 83,
                                     columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
+                                            className: "h-4 w-full"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/author-recommendations/page.tsx",
+                                            lineNumber: 88,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
+                                            className: "h-4 w-2/3 mt-2"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/author-recommendations/page.tsx",
+                                            lineNumber: 89,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/author-recommendations/page.tsx",
+                                    lineNumber: 87,
+                                    columnNumber: 17
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/src/app/author-recommendations/page.tsx",
-                            lineNumber: 78,
+                            lineNumber: 82,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/app/author-recommendations/page.tsx",
-                    lineNumber: 76,
+                    lineNumber: 80,
                     columnNumber: 11
                 }, this),
                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -286,7 +288,7 @@ function AuthorRecommendationsContent() {
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/src/app/author-recommendations/page.tsx",
-                    lineNumber: 92,
+                    lineNumber: 96,
                     columnNumber: 19
                 }, this),
                 !loading && !error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -306,7 +308,7 @@ function AuthorRecommendationsContent() {
                                                 children: author.name
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                                lineNumber: 106,
+                                                lineNumber: 110,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -314,13 +316,13 @@ function AuthorRecommendationsContent() {
                                                 children: author.affiliation
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 111,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 109,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -334,7 +336,7 @@ function AuthorRecommendationsContent() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 115,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -344,34 +346,34 @@ function AuthorRecommendationsContent() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 116,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 114,
                                             columnNumber: 13
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 113,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/author-recommendations/page.tsx",
-                                lineNumber: 104,
+                                lineNumber: 108,
                                 columnNumber: 9
                             }, this)
                         }, index, false, {
                             fileName: "[project]/src/app/author-recommendations/page.tsx",
-                            lineNumber: 97,
+                            lineNumber: 101,
                             columnNumber: 7
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/app/author-recommendations/page.tsx",
-                    lineNumber: 95,
+                    lineNumber: 99,
                     columnNumber: 3
                 }, this),
                 !loading && !error && authors.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -379,18 +381,18 @@ function AuthorRecommendationsContent() {
                     children: "No authors found."
                 }, void 0, false, {
                     fileName: "[project]/src/app/author-recommendations/page.tsx",
-                    lineNumber: 121,
+                    lineNumber: 125,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/author-recommendations/page.tsx",
-            lineNumber: 66,
+            lineNumber: 70,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/author-recommendations/page.tsx",
-        lineNumber: 65,
+        lineNumber: 69,
         columnNumber: 5
     }, this);
 }
@@ -401,17 +403,17 @@ function AuthorRecommendationsPage() {
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/src/app/author-recommendations/page.tsx",
-            lineNumber: 131,
+            lineNumber: 135,
             columnNumber: 27
         }, void 0),
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AuthorRecommendationsContent, {}, void 0, false, {
             fileName: "[project]/src/app/author-recommendations/page.tsx",
-            lineNumber: 132,
+            lineNumber: 136,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/author-recommendations/page.tsx",
-        lineNumber: 131,
+        lineNumber: 135,
         columnNumber: 7
     }, this);
 }

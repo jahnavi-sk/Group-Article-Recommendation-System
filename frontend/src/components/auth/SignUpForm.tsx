@@ -36,6 +36,10 @@ interface SignUpFormProps {
   onSuccess: () => void;
 }
 
+
+const API_URL = "https://bcda4060fa65.ngrok-free.app";
+
+
 export function SignUpForm({ onSuccess }: SignUpFormProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -80,7 +84,7 @@ export function SignUpForm({ onSuccess }: SignUpFormProps) {
     interests: data.topics || [],
   };
   try {
-    const res = await fetch('http://127.0.0.1:5000/signup', {
+    const res = await fetch(`${API_URL}/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),

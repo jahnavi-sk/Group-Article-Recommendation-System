@@ -19,6 +19,10 @@ type Author = {
 
 
 
+const API_URL = "https://bcda4060fa65.ngrok-free.app";
+// fetch(`${API_URL}/your-backend-route`, ...)
+
+
 function AuthorRecommendationsContent() {
   const searchParams = useSearchParams();
   const institution = searchParams.get('institution') || '';
@@ -41,7 +45,7 @@ function AuthorRecommendationsContent() {
   setLoading(true);
   setError(null);
   try {
-    const res = await fetch('http://127.0.0.1:5000/author-topic-recommendations', {
+    const res = await fetch(`${API_URL}/author-topic-recommendations`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -1,5 +1,6 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/author-recommendations/page": "app/author-recommendations/page.js",
+  "/author_topic/page": "app/author_topic/page.js",
   "/mode/page": "app/mode/page.js",
   "/page": "app/page.js",
   "/recommendation-type/page": "app/recommendation-type/page.js",
