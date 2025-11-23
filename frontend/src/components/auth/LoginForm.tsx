@@ -28,7 +28,7 @@ interface LoginFormProps {
   onSuccess: () => void;
 }
 
-const API_URL = "https://bcda4060fa65.ngrok-free.app";
+const API_URL = "https://f699ffaf3fe7.ngrok-free.app";
 
 export function LoginForm({ onSuccess }: LoginFormProps) {
   const { toast } = useToast();

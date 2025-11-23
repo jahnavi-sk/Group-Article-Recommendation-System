@@ -25,7 +25,7 @@ type Recommendation = {
 };
 
 
-const API_URL = "https://bcda4060fa65.ngrok-free.app";
+const API_URL = "https://f699ffaf3fe7.ngrok-free.app";
 
 function RecommendationsContent() {
   const searchParams = useSearchParams();
