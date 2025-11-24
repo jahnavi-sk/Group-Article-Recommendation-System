@@ -116,12 +116,12 @@ export default function Home() {
           <br/>
           Get personalized recommendations whether you're solo or with your crew.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        {/* <div className="flex flex-col sm:flex-row gap-4">
           <Button size="lg" className="group bg-card/50 backdrop-blur-sm" onClick={handleClick}>
             Get Started
             <MoveRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
-        </div>
+        </div> */}
          <div className="flex gap-4 mt-4">
           <Button variant="outline" onClick={() => handleAuthClick('login')}>Log In</Button>
           <Button variant="outline" onClick={() => handleAuthClick('signup')}>Sign Up</Button>
