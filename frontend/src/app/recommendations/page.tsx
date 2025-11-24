@@ -43,6 +43,9 @@ function RecommendationsContent() {
   const [likedRecommendations, setLikedRecommendations] = useState<Set<string>>(new Set());
   const [email, setEmail] = useState<string>('');
 
+
+  const [showAbstractDialog, setShowAbstractDialog] = useState(false);
+  const [activeAbstract, setActiveAbstract] = useState<string | null>(null);
   // const email = searchParams.get('email') || localStorage.getItem('userEmail') || '';
 
 
@@ -270,6 +273,33 @@ useEffect(() => {
 
 return (
   <div className="flex min-h-screen w-full flex-col items-center p-4 pt-20 bg-transparent">
+
+    {showAbstractDialog && (
+  <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50 p-4">
+    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto relative">
+      <button
+        className="absolute top-4 right-4 text-2xl font-bold hover:text-destructive transition"
+        onClick={() => setShowAbstractDialog(false)}
+        aria-label="Close"
+      >
+        ×
+      </button>
+      <h2 className="text-xl font-bold mb-4 pr-8">Full Abstract</h2>
+      <div className="prose dark:prose-invert max-w-none">
+        <p className="whitespace-pre-line text-base leading-relaxed">{activeAbstract}</p>
+      </div>
+      <div className="mt-6 flex justify-end">
+        <button
+          className="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80 transition"
+          onClick={() => setShowAbstractDialog(false)}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     {/* Problem Statement Dialog */}
     <button
       className="text-base md:text-lg mb-8 text-white font-normal inter-var text-center hover:underline"
@@ -408,6 +438,16 @@ return (
         : 'stroke-neutral-600 dark:stroke-neutral-400'
     }`}
   />
+</button>
+<button
+  className="mt-2 px-3 py-1 bg-black text-white rounded hover:bg-primary/80 transition"
+  onClick={e => {
+    e.preventDefault();
+    setActiveAbstract(rec.summary || "No abstract available.");
+    setShowAbstractDialog(true);
+  }}
+>
+  Read Full Abstract
 </button>
               {/* Card */}
               <a href={rec.url || '#'} target="_blank" rel="noopener noreferrer" className="block group">
