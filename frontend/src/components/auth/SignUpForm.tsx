@@ -37,7 +37,10 @@ interface SignUpFormProps {
 }
 
 
-const API_URL = "https://bc0211fc54fa.ngrok-free.app";
+// const API_URL = "https://bc0211fc54fa.ngrok-free.app";
+const API_URL = "https://b8cde27ab0fd.ngrok-free.app";
+
+// const API_URL = "http://127.0.0.1:7006";
 
 
 export function SignUpForm({ onSuccess }: SignUpFormProps) {

@@ -150,7 +150,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 ;
-const API_URL = "https://bc0211fc54fa.ngrok-free.app";
+// const API_URL = "https://bc0211fc54fa.ngrok-free.app";
+const API_URL = "http://127.0.0.1:7006";
 function RecommendationsContent() {
     const searchParams = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSearchParams"])();
     const [recommendations, setRecommendations] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
@@ -389,7 +390,7 @@ function RecommendationsContent() {
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 280,
+                            lineNumber: 281,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -397,7 +398,7 @@ function RecommendationsContent() {
                             children: "Full Abstract"
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 287,
+                            lineNumber: 288,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -407,12 +408,12 @@ function RecommendationsContent() {
                                 children: activeAbstract
                             }, void 0, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 289,
+                                lineNumber: 290,
                                 columnNumber: 9
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 288,
+                            lineNumber: 289,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -423,23 +424,23 @@ function RecommendationsContent() {
                                 children: "Close"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 292,
+                                lineNumber: 293,
                                 columnNumber: 9
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 291,
+                            lineNumber: 292,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/recommendations/page.tsx",
-                    lineNumber: 279,
+                    lineNumber: 280,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/recommendations/page.tsx",
-                lineNumber: 278,
+                lineNumber: 279,
                 columnNumber: 3
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -448,7 +449,7 @@ function RecommendationsContent() {
                 children: "Want to get a problem statement based on some of these abstracts ?"
             }, void 0, false, {
                 fileName: "[project]/src/app/recommendations/page.tsx",
-                lineNumber: 304,
+                lineNumber: 305,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -457,7 +458,7 @@ function RecommendationsContent() {
                 children: sortByYear ? "Original Order" : "Sort by Year"
             }, void 0, false, {
                 fileName: "[project]/src/app/recommendations/page.tsx",
-                lineNumber: 312,
+                lineNumber: 313,
                 columnNumber: 5
             }, this),
             showDialog && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -472,7 +473,7 @@ function RecommendationsContent() {
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 322,
+                            lineNumber: 323,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -480,7 +481,7 @@ function RecommendationsContent() {
                             children: "Recommended Problem Statement"
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 329,
+                            lineNumber: 330,
                             columnNumber: 11
                         }, this),
                         problemLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -490,12 +491,12 @@ function RecommendationsContent() {
                                 children: "Generating problem statement..."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 332,
+                                lineNumber: 333,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 331,
+                            lineNumber: 332,
                             columnNumber: 13
                         }, this),
                         !problemLoading && problemStatement && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -505,12 +506,12 @@ function RecommendationsContent() {
                                 children: problemStatement
                             }, void 0, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 337,
+                                lineNumber: 338,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 336,
+                            lineNumber: 337,
                             columnNumber: 13
                         }, this),
                         !problemLoading && !problemStatement && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -518,7 +519,7 @@ function RecommendationsContent() {
                             children: "No problem statement available."
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 341,
+                            lineNumber: 342,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -529,23 +530,23 @@ function RecommendationsContent() {
                                 children: "Close"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 344,
+                                lineNumber: 345,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/recommendations/page.tsx",
-                            lineNumber: 343,
+                            lineNumber: 344,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/recommendations/page.tsx",
-                    lineNumber: 321,
+                    lineNumber: 322,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/recommendations/page.tsx",
-                lineNumber: 320,
+                lineNumber: 321,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -557,7 +558,7 @@ function RecommendationsContent() {
                         children: showAuthors ? "Show Papers" : "Authors"
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 357,
+                        lineNumber: 358,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -567,7 +568,7 @@ function RecommendationsContent() {
                         children: showCBF ? "Show My Papers" : "Check out what similar users have liked!"
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 364,
+                        lineNumber: 365,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -578,7 +579,7 @@ function RecommendationsContent() {
                                 children: showAuthors ? "Recommended Authors" : "Your Recommendations"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 374,
+                                lineNumber: 375,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -586,13 +587,13 @@ function RecommendationsContent() {
                                 children: showAuthors ? "Authors from recommended papers for your topics." : "Here are some research papers based on your topics."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 377,
+                                lineNumber: 378,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 373,
+                        lineNumber: 374,
                         columnNumber: 7
                     }, this),
                     loading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -608,20 +609,20 @@ function RecommendationsContent() {
                                                 className: "h-6 w-3/4"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 390,
+                                                lineNumber: 391,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
                                                 className: "h-4 w-1/2 mt-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 391,
+                                                lineNumber: 392,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/recommendations/page.tsx",
-                                        lineNumber: 389,
+                                        lineNumber: 390,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -630,38 +631,38 @@ function RecommendationsContent() {
                                                 className: "h-4 w-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 394,
+                                                lineNumber: 395,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
                                                 className: "h-4 w-full mt-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 395,
+                                                lineNumber: 396,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
                                                 className: "h-4 w-2/3 mt-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 396,
+                                                lineNumber: 397,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/recommendations/page.tsx",
-                                        lineNumber: 393,
+                                        lineNumber: 394,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, i, true, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 388,
+                                lineNumber: 389,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 386,
+                        lineNumber: 387,
                         columnNumber: 9
                     }, this),
                     error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -669,7 +670,7 @@ function RecommendationsContent() {
                         children: error
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 404,
+                        lineNumber: 405,
                         columnNumber: 17
                     }, this),
                     !loading && !error && !showCBF && recommendations.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -677,7 +678,7 @@ function RecommendationsContent() {
                         children: "No recommendations found."
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 408,
+                        lineNumber: 409,
                         columnNumber: 9
                     }, this),
                     !loading && !error && showCBF && !cbfLoading && cbfRecommendations.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -685,7 +686,7 @@ function RecommendationsContent() {
                         children: "No similar-user recommendations found."
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 411,
+                        lineNumber: 412,
                         columnNumber: 9
                     }, this),
                     showCBF && cbfLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -693,7 +694,7 @@ function RecommendationsContent() {
                         children: "Loading what similar users liked..."
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 416,
+                        lineNumber: 417,
                         columnNumber: 9
                     }, this),
                     !loading && !error && !showAuthors && !showCBF && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -713,12 +714,12 @@ function RecommendationsContent() {
                                             className: `transition ${likedRecommendations.has(rec.id) ? 'fill-red-500 stroke-red-500' : 'stroke-neutral-600 dark:stroke-neutral-400'}`
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                            lineNumber: 433,
+                                            lineNumber: 434,
                                             columnNumber: 3
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/recommendations/page.tsx",
-                                        lineNumber: 425,
+                                        lineNumber: 426,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -731,7 +732,7 @@ function RecommendationsContent() {
                                         children: "Read Full Abstract"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/recommendations/page.tsx",
-                                        lineNumber: 442,
+                                        lineNumber: 443,
                                         columnNumber: 1
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -749,7 +750,7 @@ function RecommendationsContent() {
                                                             children: rec.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                                            lineNumber: 456,
+                                                            lineNumber: 457,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -757,13 +758,13 @@ function RecommendationsContent() {
                                                             children: rec.authors.map((a)=>a.name).join(', ')
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                                            lineNumber: 457,
+                                                            lineNumber: 458,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/recommendations/page.tsx",
-                                                    lineNumber: 455,
+                                                    lineNumber: 456,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -772,34 +773,34 @@ function RecommendationsContent() {
                                                         children: rec.summary || "This is an abstract."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/recommendations/page.tsx",
-                                                        lineNumber: 462,
+                                                        lineNumber: 463,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/recommendations/page.tsx",
-                                                    lineNumber: 461,
+                                                    lineNumber: 462,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                            lineNumber: 454,
+                                            lineNumber: 455,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/recommendations/page.tsx",
-                                        lineNumber: 453,
+                                        lineNumber: 454,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, index, true, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 423,
+                                lineNumber: 424,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 421,
+                        lineNumber: 422,
                         columnNumber: 9
                     }, this),
                     !loading && !error && showAuthors && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -818,12 +819,12 @@ function RecommendationsContent() {
                                                 children: author.name
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 486,
+                                                lineNumber: 487,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                            lineNumber: 485,
+                                            lineNumber: 486,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -832,28 +833,28 @@ function RecommendationsContent() {
                                                 children: "View profile on OpenAlex"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 489,
+                                                lineNumber: 490,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                            lineNumber: 488,
+                                            lineNumber: 489,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/recommendations/page.tsx",
-                                    lineNumber: 484,
+                                    lineNumber: 485,
                                     columnNumber: 15
                                 }, this)
                             }, author.id, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 477,
+                                lineNumber: 478,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 475,
+                        lineNumber: 476,
                         columnNumber: 9
                     }, this),
                     !loading && !error && showCBF && !cbfLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -873,7 +874,7 @@ function RecommendationsContent() {
                                                     children: rec.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/recommendations/page.tsx",
-                                                    lineNumber: 504,
+                                                    lineNumber: 505,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -881,13 +882,13 @@ function RecommendationsContent() {
                                                     children: rec.authors.map((a)=>a.name).join(', ')
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/recommendations/page.tsx",
-                                                    lineNumber: 505,
+                                                    lineNumber: 506,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                            lineNumber: 503,
+                                            lineNumber: 504,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -896,40 +897,40 @@ function RecommendationsContent() {
                                                 children: rec.summary
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                                lineNumber: 510,
+                                                lineNumber: 511,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/recommendations/page.tsx",
-                                            lineNumber: 509,
+                                            lineNumber: 510,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/recommendations/page.tsx",
-                                    lineNumber: 502,
+                                    lineNumber: 503,
                                     columnNumber: 15
                                 }, this)
                             }, rec.id, false, {
                                 fileName: "[project]/src/app/recommendations/page.tsx",
-                                lineNumber: 501,
+                                lineNumber: 502,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/recommendations/page.tsx",
-                        lineNumber: 499,
+                        lineNumber: 500,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/recommendations/page.tsx",
-                lineNumber: 355,
+                lineNumber: 356,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/recommendations/page.tsx",
-        lineNumber: 275,
+        lineNumber: 276,
         columnNumber: 3
     }, this);
 }
@@ -940,17 +941,17 @@ function RecommendationsPage() {
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/src/app/recommendations/page.tsx",
-            lineNumber: 525,
+            lineNumber: 526,
             columnNumber: 27
         }, void 0),
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(RecommendationsContent, {}, void 0, false, {
             fileName: "[project]/src/app/recommendations/page.tsx",
-            lineNumber: 526,
+            lineNumber: 527,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/recommendations/page.tsx",
-        lineNumber: 525,
+        lineNumber: 526,
         columnNumber: 7
     }, this);
 }
