@@ -25,7 +25,7 @@ export default function RecommendationTypePage() {
           <Card className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 bg-card/50 backdrop-blur-sm">
             <CardHeader className="flex flex-col items-center justify-center p-8 text-center">
               <Book className="h-16 w-16 mb-4 text-primary" />
-              <CardTitle className="text-2xl font-semibold">Works</CardTitle>
+              <CardTitle className="text-2xl font-semibold">Articles</CardTitle>
               <CardDescription className="mt-2">Get research paper recommendations.</CardDescription>
             </CardHeader>
           </Card>
