@@ -16,6 +16,8 @@ function AccountViewContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const returnTo = searchParams.get('returnTo') || '/recommendation-type';
+  const [deleteBtnMoveCount, setDeleteBtnMoveCount] = useState(0);
+  const [deleteBtnStyle, setDeleteBtnStyle] = useState<React.CSSProperties>({});
 
   useEffect(() => {
     const email = localStorage.getItem('userEmail') || localStorage.getItem('email');
@@ -43,6 +45,28 @@ function AccountViewContent() {
         setLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    if (confirmAction !== 'delete_final') {
+      setDeleteBtnMoveCount(0);
+      setDeleteBtnStyle({});
+    }
+  }, [confirmAction]);
+
+  const moveDeleteButton = () => {
+    if (deleteBtnMoveCount < 3) {
+      const x = Math.max(20, Math.random() * (window.innerWidth - 200));
+      const y = Math.max(20, Math.random() * (window.innerHeight - 100));
+      setDeleteBtnStyle({
+        position: 'fixed',
+        left: `${x}px`,
+        top: `${y}px`,
+        transition: 'all 0.3s ease-out',
+        zIndex: 100,
+      });
+      setDeleteBtnMoveCount((prev) => prev + 1);
+    }
+  };
 
   const performLogout = () => {
     localStorage.removeItem('email');
@@ -191,7 +215,16 @@ function AccountViewContent() {
               <Button variant="ghost" onClick={() => setConfirmAction(null)} className="hover:bg-white/5">Cancel</Button>
               <Button 
                 className="bg-red-500/10 border border-red-500/20 text-red-500 hover:bg-red-500/20"
-                onClick={performDelete}
+                onClick={(e) => {
+                  if (deleteBtnMoveCount < 3) {
+                    e.preventDefault();
+                    moveDeleteButton();
+                  } else {
+                    performDelete();
+                  }
+                }}
+                onMouseEnter={moveDeleteButton}
+                style={deleteBtnStyle}
               >
                 Delete Forever
               </Button>
