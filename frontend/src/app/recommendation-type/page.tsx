@@ -5,7 +5,17 @@ import { Book, User } from 'lucide-react';
 
 export default function RecommendationTypePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-transparent">
+    <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-transparent relative">
+
+      {/* Profile Button */}
+      <div className="absolute top-0 right-0 m-4">
+        <Link href="/account_view?returnTo=/recommendation-type">
+          <button className="px-4 py-2 bg-secondary text-secondary-foreground rounded shadow hover:bg-secondary/80 transition flex items-center gap-2">
+            <User size={18} /> <span className="hidden sm:inline">Profile</span>
+          </button>
+        </Link>
+      </div>
+
       <div className="mb-12 text-center animate-in fade-in-0 duration-500">
         <h1 className="text-4xl font-bold tracking-tight md:text-5xl">What Are You Looking For?</h1>
         <p className="mt-4 text-lg text-muted-foreground">Choose a recommendation type.</p>

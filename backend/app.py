@@ -245,26 +245,20 @@ WITH $email AS email,
 
 MERGE (u:User {email: email})
 SET u.password_hash = passwordHash,
-    u.created_at = datetime()
+    u.created_at = datetime(),
+    u.interests = interests
 
 WITH u, email, interests
-MATCH (u) WHERE u.email = email
 
-CALL (interests,u){
-    WITH interests AS input_interests, u
-    UNWIND input_interests AS interest_query
-    MATCH (interest_match)
-    WHERE (interest_match:Concept OR interest_match:Topic OR interest_match:Keyword)
-      AND interest_match.displayName CONTAINS interest_query
-    
-    WITH u, collect(DISTINCT interest_match) AS all_valid_interests
-    RETURN all_valid_interests
-}
+// Find matching concepts for ANY of the provided interests (Case Insensitive)
+OPTIONAL MATCH (interest_match)
+WHERE (interest_match:Concept OR interest_match:Topic OR interest_match:Keyword)
+  AND any(i IN interests WHERE toLower(interest_match.displayName) CONTAINS toLower(i))
 
-WITH u, all_valid_interests
-UNWIND all_valid_interests AS interest_match
-
-MERGE (u)-[:U_I_E]->(interest_match)
+// Create relationships if matches found
+FOREACH (_ IN CASE WHEN interest_match IS NOT NULL THEN [1] ELSE [] END |
+    MERGE (u)-[:U_I_E]->(interest_match)
+)
 
 RETURN u.email AS UserEmail, count(interest_match) AS LinksCreated
 """
@@ -446,5 +440,59 @@ def login():
     return jsonify({"message": "Login successful", "email": email}), 200
 
 
+@app.route('/get-profile', methods=['POST'])
+def get_profile():
+    data = request.json
+    email = data.get('email')
+    
+    if not email:
+        return jsonify({"error": "Missing email"}), 400
+
+    with GraphDatabase.driver(URI, auth=AUTH) as driver:
+        with driver.session() as session:
+            query = """
+            MATCH (u:User {email: $email})
+            OPTIONAL MATCH (u)-[:U_W_E {type:'LIKED'}]->(w:Work)
+            WITH u, collect(DISTINCT w) AS works
+            RETURN u.email AS email, toString(u.created_at) AS created_at,
+                   [x IN works WHERE x IS NOT NULL | {id: x.id, title: x.displayName, summary: x.abstract}] AS liked_works
+            """
+            result = session.run(query, email=email).single()
+            
+            if not result:
+                return jsonify({"error": "User not found"}), 404
+            
+            return jsonify({
+                "name": result["email"].split('@')[0],
+                "email": result["email"],
+                "member_since": result["created_at"] or "Unknown",
+                "account_type": "Standard",
+                "liked_works": result["liked_works"]
+            }), 200
+
+
+@app.route('/delete-account', methods=['DELETE'])
+def delete_account():
+    data = request.json
+    email = data.get('email')
+    
+    if not email:
+        return jsonify({"error": "Missing email"}), 400
+
+    with GraphDatabase.driver(URI, auth=AUTH) as driver:
+        with driver.session() as session:
+            query = "MATCH (u:User {email: $email}) DETACH DELETE u"
+            session.run(query, email=email)
+            
+    return jsonify({"message": "Account deleted successfully"}), 200
+
+
 if __name__ == '__main__':
+    # Migration: Initialize 'interests' for existing users to suppress Neo4j warnings
+    try:
+        with GraphDatabase.driver(URI, auth=AUTH) as driver:
+            with driver.session() as session:
+                session.run("MATCH (u:User) WHERE u.interests IS NULL SET u.interests = []")
+    except Exception as e:
+        print(f"Migration skipped: {e}")
     app.run(debug=True)

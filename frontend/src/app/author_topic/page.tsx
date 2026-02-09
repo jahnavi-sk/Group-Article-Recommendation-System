@@ -3,11 +3,12 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { X, UserPlus, UserMinus, Search } from 'lucide-react';
+import { X, UserPlus, UserMinus, Search, User, ArrowLeft } from 'lucide-react';
 import { PlaceholdersAndVanishInput } from '@/components/ui/placeholders-and-vanish-input';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input'; 
 import { Suspense } from 'react';
+import Link from 'next/link';
 
 
 type Member = {
@@ -141,7 +142,20 @@ function TopicContent() {
 
   
   return (
-    <div className="flex min-h-screen w-full flex-col items-center p-4 pt-20 bg-transparent">
+    <div className="flex min-h-screen w-full flex-col items-center p-4 pt-20 bg-transparent relative">
+      <div className="absolute top-8 left-8 z-20 animate-in fade-in-0 duration-500">
+        <Link href="/recommendation-type" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back
+        </Link>
+      </div>
+      <div className="absolute top-0 right-0 m-4">
+        <Link href={`/account_view?returnTo=${encodeURIComponent(`/author_topic?${searchParams.toString()}`)}`}>
+          <button className="px-4 py-2 bg-secondary text-secondary-foreground rounded shadow hover:bg-secondary/80 transition flex items-center gap-2">
+            <User size={18} /> <span className="hidden sm:inline">Profile</span>
+          </button>
+        </Link>
+      </div>
       <div className="w-full max-w-xl">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold mb-2">

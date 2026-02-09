@@ -5,7 +5,8 @@ import { Suspense, useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useSearchParams } from 'next/navigation';
-import { Heart } from 'lucide-react';
+import { Heart, User, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
 // Matches the Recommendation type from the original flow
 type Author = {
@@ -112,7 +113,7 @@ function RecommendationsContent() {
   if (mode === 'group') {
     // Collect all member_* params
     searchParams.forEach((value, key) => {
-      if (key.startsWith('member_')) {
+      if (key.startsWith('member_') && !key.endsWith('_institution')) {
         topics = topics.concat(value.split(',').map(t => t.trim()).filter(Boolean));
       }
     });
@@ -364,8 +365,23 @@ return (
         {showAuthors ? "Show Papers" : "Authors"}
       </button>
       
+      <div className="absolute top-8 left-8 z-20 animate-in fade-in-0 duration-500">
+        <Link href="/recommendation-type" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back
+        </Link>
+      </div>
+
+      <Link href={`/account_view?returnTo=${encodeURIComponent(`/recommendations?${searchParams.toString()}`)}`}>
+        <button
+          className="absolute top-0 right-32 m-4 px-4 py-2 bg-secondary text-secondary-foreground rounded shadow hover:bg-secondary/80 transition flex items-center gap-2"
+        >
+          <User size={18} /> <span className="hidden sm:inline">Profile</span>
+        </button>
+      </Link>
+
       <button
-        className="absolute top-0 left-0 m-4 px-4 py-2 bg-primary text-white rounded shadow hover:bg-primary/80 transition"
+        className="absolute top-14 left-0 m-4 px-4 py-2 bg-primary text-white rounded shadow hover:bg-primary/80 transition"
         onClick={() => setShowCBF(prev => !prev)}
         disabled={cbfLoading}
       >
@@ -382,6 +398,15 @@ return (
             ? "Authors from recommended papers for your topics."
             : "Here are some research papers based on your topics."}
         </p>
+        {topics.length > 0 && (
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            {Array.from(new Set(topics)).map((topic, i) => (
+              <span key={i} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                {topic}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Loading Skeleton */}
